@@ -23,7 +23,6 @@ export class RegisterComponent implements OnInit {
   }
 
   registerPatient() {
-    alert(this.patient.lastName);
     return this.patientService.createPatient(this.patient).subscribe(data => {
       this.patient = data;
     });

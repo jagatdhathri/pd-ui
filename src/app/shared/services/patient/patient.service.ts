@@ -5,6 +5,8 @@ import { Observable } from 'rxjs/Observable';
 /**Model */
 import { Patient } from '../../../shared/model/patient';
 
+import { Constants } from '../../../shared/constants';
+
 @Injectable()
 export class PatientService {
 
@@ -12,7 +14,7 @@ export class PatientService {
 
 
   createPatient(patient: Patient): Observable<Patient> {
-    return this.http.post<Patient>('//localhost:9090/patient', patient);
+    return this.http.post<Patient>(Constants.WEB_API_URL, patient);
   }
 
 }
