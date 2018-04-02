@@ -1,17 +1,27 @@
 <mat-card>
   <mat-form-field>
-  <input matInput type="text" placeholder="First Name" value="JD">
+    <input matInput type="text" placeholder="First Name" value="JD">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Last Name" value="">
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <input matInput type="text" placeholder="Email" value="">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Age" value="">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
 
-
-<mat-form-field>
-  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
-
-
-<br />
+  <br />
+  <br />
   <button mat-raised-button color="primary">Register</button>
 </mat-card>
