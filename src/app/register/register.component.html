@@ -1,17 +1,17 @@
 <mat-card>
   <mat-form-field>
-    <input matInput type="text" placeholder="First Name" value="JD">
+    <input matInput type="text" placeholder="First Name" [(ngModel)]="patient.firstName" >
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput type="text" placeholder="Last Name" value="">
+    <input matInput type="text" placeholder="Last Name" [(ngModel)]="patient.lastName" >
   </mat-form-field>
   <br />
   <mat-form-field>
-    <input matInput type="text" placeholder="Email" value="">
+    <input matInput type="text" placeholder="Email" [(ngModel)]="patient.email" >
   </mat-form-field>
   <mat-form-field>
-    <input matInput type="text" placeholder="Age" value="">
+    <input matInput type="text" placeholder="Age" [(ngModel)]="patient.age" >
   </mat-form-field>
 
   <mat-form-field>
@@ -20,8 +20,11 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
+  <mat-form-field>
+    <input matInput type="text" placeholder="Reg ID" [(ngModel)]="patient.patientId">
+  </mat-form-field>
 
   <br />
   <br />
-  <button mat-raised-button color="primary">Register</button>
+  <button mat-raised-button color="primary" (click)="registerPatient()">Register</button>
 </mat-card>
